@@ -8,11 +8,16 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
   <div class="container">
-    <h1>Weather App</h1>
     <div class="weather-container">
       <input type="text" id="locationInput" placeholder="Enter city name">
       <button id="submitBtn">Get Weather</button>
+      <div id="searchHistory" class="search-history-item">
+        
+      </div>
       <div id="weatherInfo">
         <h2 id="location"></h2>
         <p id="temperature"></p>
@@ -20,6 +25,7 @@
         <p id="humidity"></p>
         <p id="windSpeed"></p>
         <img id="weatherIcon" src="" alt="Weather Icon">
+        <div id="forecast"></div>
       </div>
     </div>
   </div>

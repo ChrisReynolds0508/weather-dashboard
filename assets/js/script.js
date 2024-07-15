@@ -10,6 +10,7 @@ const humidityElement = document.getElementById('humidity');
 const windSpeedElement = document.getElementById('windSpeed');
 const weatherIconElement = document.getElementById('weatherIcon');
 const forecastContainer = document.getElementById('forecast');
+const searchHistoryContainer = document.getElementById('searchHistory');
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchHistory = JSON.parse(localStorage.getItem ('weatherSearchHistory')) || []; // Get search history from local storage
@@ -83,6 +84,7 @@ function displayForecast(data) {
   
       const forecastElement = document.createElement('div');
       forecastElement.classList.add('forecast-item');
+      console.log(forecastItem.weather[0]);
       forecastElement.innerHTML = `
         <h3>${forecastDate.toLocaleDateString('en-US', { weekday: 'short' })}</h3>
         <img src="http://openweathermap.org/img/w/${forecastItem.weather[0].icon}.png" alt="${forecastItem.weather[0].main} Icon">
@@ -109,6 +111,7 @@ function displayForecast(data) {
   }
   
   function renderSearchHistory(history) {
+
     searchHistoryContainer.innerHTML = ''; // Clear previous history
   
     history.forEach(item => {

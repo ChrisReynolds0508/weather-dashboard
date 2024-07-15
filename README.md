@@ -17,10 +17,10 @@ Once the webpage is closed and reopened, the landing page should display your pr
 ![Screenshot of deployed weather app forecast](./assets/images/weather-app2.png)
 
 ## URL
-
+https://chrisreynolds0508.github.io/weather-dashboard/
 
 ## Authors
-Chris Reynolds
+Chris Reynolds 
 
 ## License
 Please refer to the license in the repo.

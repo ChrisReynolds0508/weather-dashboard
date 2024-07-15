@@ -100,8 +100,8 @@ function displayForecast(data) {
     let searchHistory = JSON.parse(localStorage.getItem('weatherSearchHistory')) || [];
     // Ensure location is not already in the search history
     if (!searchHistory.includes(location)) {
-      // Limit search history to 5 entries (adjust as needed)
-      if (searchHistory.length >= 5) {
+      // Limit search history to 8 entries
+      if (searchHistory.length >= 8) {
         searchHistory.shift(); // Remove the oldest entry
       }
       searchHistory.push(location); // Add new location to the end
